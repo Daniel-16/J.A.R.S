@@ -34,7 +34,7 @@ recognition.onstart = () => {
     console.log('Voice is activated')
 };
 
-recognition.onspeechend = (e) => {
+recognition.onresult = (e) => {
     const current = e.resultIndex;
     const transcript = e.results[current][0].transcript;
     content.innerHTML = transcript;
