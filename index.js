@@ -34,11 +34,12 @@ recognition.onstart = () => {
     console.log('Voice is activated')
 };
 
-recognition.onresult = (e) => {
+recognition.onspeechend = (e) => {
     const current = e.resultIndex;
     const transcript = e.results[current][0].transcript;
     content.innerHTML = transcript;
     reply(transcript);
+    button.className = 'btn btn-primary shadow-none'
 }
 
 button.addEventListener('click', () => {
