@@ -61,7 +61,7 @@ function reply (message) {
         utterance.pitch = 1;
         utterance.volume = 1.5
         window.speechSynthesis.speak(utterance);
-    };
+    }
     if (message.includes(['fuck', 'shit', 'bitch', 'idiot', 'bastard'])) {
         const forbiddenReply = forbidden[Math.floor(Math.random() * forbidden.length)];
         window.speechSynthesis.cancel();
