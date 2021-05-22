@@ -1,6 +1,6 @@
 const button = document.getElementById('button');
 const content = document.getElementById('content');
-const SpeechRecognition = window.webkitSpeechRecognition;
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
 const greetings = [
@@ -68,5 +68,5 @@ function reply (message) {
     speech.pitch = 1;
     speech.rate = 1;
     speech.text = 'I am sorry, but i have troubles understanding you';
-    window.speechSynthesis.speak(speech)
+    window.SpeechSynthesisVoice(speech)
 }
