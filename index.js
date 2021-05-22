@@ -47,7 +47,7 @@ button.addEventListener('click', () => {
 });
 
 function reply (message) {
-    const speech = new SpeechSynthesisUtterance();
+    const speech = new SpeechSynthesisVoice();
     if (message.includes('hello') || message.includes('hi')) {
         const welcome = greetings[Math.floor(Math.random() * greetings.length)];
         speech.text = welcome
@@ -68,5 +68,6 @@ function reply (message) {
     speech.pitch = 1;
     speech.rate = 1;
     speech.text = 'I am sorry, but i have troubles understanding you';
-    window.SpeechSynthesisVoice(speech)
+    window.speechSynthesis.cancel()
+    window.speechSynthesis.speak(speech)
 }
