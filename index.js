@@ -61,32 +61,28 @@ function reply (message) {
         utterance.pitch = 1;
         utterance.volume = 1.5
         window.speechSynthesis.speak(utterance);
-    }
-    if (message.includes(['fuck', 'shit', 'bitch', 'idiot', 'bastard'])) {
+    } else if (message.includes(['fuck', 'shit', 'bitch', 'idiot', 'bastard'])) {
         const forbiddenReply = forbidden[Math.floor(Math.random() * forbidden.length)];
         window.speechSynthesis.cancel();
         const utterance = new SpeechSynthesisUtterance(forbiddenReply);
         utterance.pitch = 1;
         utterance.volume = 1.5
         window.speechSynthesis.speak(utterance);
-    }
-    if (message.includes('Bad side') || message.include('your other side')) {
+    }else if (message.includes('Bad side') || message.include('your other side')) {
         const badSideReply = badSide[Math.floor(Math.random() * badSide.length)];
         window.speechSynthesis.cancel();
         const utterance = new SpeechSynthesisUtterance(badSideReply);
         utterance.pitch = 1;
         utterance.volume = 1.5
         window.speechSynthesis.speak(utterance);
-    }
-    if (message.includes('who created you') || message.includes('created you') || message.includes('creator')) {
+    }else if (message.includes('who created you') || message.includes('created you') || message.includes('creator')) {
         const creatorReply = creator[Math.floor(Math.random() * creator.length)];
         window.speechSynthesis.cancel();
         const utterance = new SpeechSynthesisUtterance(creatorReply);
         utterance.pitch = 1;
         utterance.volume = 1.5
         window.speechSynthesis.speak(utterance);
-    }
-    if (message.includes('how are you') || message.includes('how you') || message.includes('you doing')) {
+    }else if (message.includes('how are you') || message.includes('how you') || message.includes('you doing')) {
         const feeling = answer[Math.floor(Math.random() * answer.length)];
         window.speechSynthesis.cancel();
         const utterance = new SpeechSynthesisUtterance(feeling);
