@@ -1,6 +1,6 @@
 const button = document.getElementById('button');
 const content = document.getElementById('content');
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const SpeechRecognition = window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
 const greetings = [
